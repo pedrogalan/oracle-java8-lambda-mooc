@@ -3,7 +3,7 @@
  *
  * JDK 8 MOOC Lesson 1 homework
  */
-package lesson1;
+package lesson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +51,7 @@ public class Lesson1 {
 
     list.forEach(s -> result.append(s.charAt(0)));
 
-    System.out.println(result.toString());
+    System.out.println(result);
   }
 
   /**
@@ -60,8 +60,7 @@ public class Lesson1 {
    * Remove the words that have odd lengths from the list.
    */
   private void exercise2() {
-    List<String> list = new ArrayList<>(Arrays.asList(
-        "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
+    List<String> list = new ArrayList<>(Arrays.asList("alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     list.removeIf(s -> s.length() % 2 == 0);
 
@@ -74,8 +73,7 @@ public class Lesson1 {
    * Replace every word in the list with its upper case equivalent.
    */
   private void exercise3() {
-    List<String> list = new ArrayList<>(Arrays.asList(
-        "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
+    List<String> list = new ArrayList<>(Arrays.asList("alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     list.replaceAll(String::toUpperCase);
 
@@ -96,7 +94,7 @@ public class Lesson1 {
 
     StringBuilder result = new StringBuilder();
 
-    map.forEach((k, v) -> result.append(k + v));
+    map.forEach((k, v) -> result.append(k).append(v));
 
     System.out.println(result);
   }
